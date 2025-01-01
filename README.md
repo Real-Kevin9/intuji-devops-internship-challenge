@@ -33,3 +33,50 @@ use Silarhi\Hello;
 $hello = new Hello();
 echo $hello->display() . "\n";
 ```
+
+# Intuji DevOps Internship Challenge
+
+## Steps to Install Docker
+
+1. Update your package list:
+   ```bash
+   sudo apt-get update
+   ```
+2. Install Docker:
+   ```bash
+   sudo apt install docker.io
+   ```
+3. Start Docker:
+   ```bash
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   ```
+
+## Steps to Build and Run the Application
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Real-Kevin9/intuji-devops-internship-challenge.git
+   cd intuji-devops-internship-challenge
+   ```
+
+2. Build the Docker image:
+   ```bash
+   docker build -t kevinrajkarki/php-hello-world .
+   ```
+
+3. Run the Docker container:
+   ```bash
+   docker run -d -p 8080:80 kevinrajkarki/php-hello-world
+   ```
+
+## Docker Hub Image Link
+
+- Link to Docker Hub image: `https://hub.docker.com/r/kevinrajkarki/php-hello-world`
+
+## Jenkins Pipeline Details
+
+- Source Code Management: GitHub repository URL
+- Build Steps: 
+   - `docker build -t kevinrajkarki/php-hello-world .`
+   - `docker run -d -p 8082:80 kevinrajkarki/php-hello-world`
